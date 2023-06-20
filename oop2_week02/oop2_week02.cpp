@@ -3,19 +3,20 @@ using namespace std;
 
 int main() {
 	int number = 0;
-	//int count = 0;
-	bool isPrime = true; //memory+, readability
+	bool isPrime = true; //less memory, readability
 
 	cout << "Input number : ";
 	cin >> number;
 
 	for (int i = 2; i < number; i++) {
 		if (number % i == 0) {
-			//count++;
 			isPrime = false; //remove add operation
+			break;
 		}
+		cout << i << " ";
+
 	}
-	if (isPrime==true) {
+	if (isPrime) {
 		cout << number << " is prime number~\n";
 	}
 	else {
