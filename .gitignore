@@ -13,6 +13,10 @@
 *.idb
 *.ipch
 *.VC.db
+*.suo
+*.lock
+*.VC.opendb
+
 
 # Prerequisites
 *.d
