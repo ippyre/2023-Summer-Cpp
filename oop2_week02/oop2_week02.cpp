@@ -8,14 +8,20 @@ int main() {
 	cout << "Input number : ";
 	cin >> number;
 
-	for (int i = 2; i < number; i++) {
-		if (number % i == 0) {
-			isPrime = false; //remove add operation
-			break;
-		}
-		cout << i << " ";
-
+	if (number < 2) {
+		isPrime = false;
 	}
+	else {
+		for (int i = 2; i < number; i++) {
+			if (number % i == 0) {
+				isPrime = false; //remove add operation
+				break;
+			}
+			cout << i << " ";
+
+			}
+		}
+
 	if (isPrime) {
 		cout << number << " is prime number~\n";
 	}
