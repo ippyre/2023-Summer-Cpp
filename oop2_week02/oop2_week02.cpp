@@ -10,7 +10,7 @@ bool isPrime(int n) { //pass by value
 			if (n % i == 0) {
 				return false; //remove add operation
 			}
-			cout << i << " ";
+			
 
 		}
 		return true;
@@ -18,16 +18,23 @@ bool isPrime(int n) { //pass by value
 
 }
 int main() {
-	int number = 0;
+	int n1 = 0;
+	int n2 = 0;
 
-	cout << "Input number : ";
-	cin >> number;
+	cout << "Input number #1: ";
+	cin >> n1;
+	cout << "Input number #2 : ";
+	cin >> n2;
 
-	if (isPrime(number)) {
-		cout << number << " is prime number~\n";
+	if (n1 > n2) {
+		int tmp = n1;
+		n1 = n2;
+		n2 = tmp;
 	}
-	else {
-		cout << number << " is NOT prime number~\n";
+	for (int i = n1; i <= n2; i++) {
+		if (isPrime(i)) {
+			cout << i << " ";
+		}
 	}
 
 	return 0;
