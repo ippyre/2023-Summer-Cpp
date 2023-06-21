@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void test(int ra) {
+void test(int &ra) {
 	ra = 7;
 }
 
