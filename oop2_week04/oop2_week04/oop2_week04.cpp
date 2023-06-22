@@ -10,10 +10,14 @@ private:
 	string name;
 	static int count; // =0 에러 발생
 public:
-	Student() {
+	Student() {//기본 생성자
 		cout << "default constructor!" << '\n';
 		count++;
-	}//기본 생성자
+	}
+	~Student() {//소멸자
+		cout << "destructor activated..\n";
+		count--;
+	}
 	static int getCount() { //인라인 형태 -> 함수 호출에 오버헤드가 들지 않음
 		return count;
 	}
@@ -33,6 +37,6 @@ int main() {
 	cout << s1.getCount() << '\n'; //객체 인스턴
 	cout << Student::getCount() << '\n'; //클래스 메소드(자바에선 이렇게만 쓸 수 있음?);
 	test();
-	cout << Student::getCount() << '\n'; // 3, ???
+	cout << Student::getCount() << '\n'; // 2
 	return 0;
 }
