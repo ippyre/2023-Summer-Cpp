@@ -21,9 +21,18 @@ public:
 //생성자가 없기 때문에 기본 생성자가 생긴 상태 -> 객체를 생성할 때 count++해주고 싶은 상황
 int Student::count = 0;
 
+void test() {
+	Student s3;
+	cout << Student::getCount() << '\n';
+}
+
 int main() {
 	Student s1;
-	cout << s1.getCount() << '\n';
-	cout << Student::getCount() << '\n';
+	Student s2;
+
+	cout << s1.getCount() << '\n'; //객체 인스턴
+	cout << Student::getCount() << '\n'; //클래스 메소드(자바에선 이렇게만 쓸 수 있음?);
+	test();
+	cout << Student::getCount() << '\n'; // 3, ???
 	return 0;
 }
