@@ -11,11 +11,11 @@ private:
 	static int count; // =0 에러 발생
 public:
 	Student() {//기본 생성자
-		cout << "default constructor!" << '\n';
+		cout << this << " default constructor!" << '\n';
 		count++;
 	}
 	~Student() {//소멸자
-		cout << "destructor activated..\n";
+		cout << this << " destructor activated..\n";
 		count--;
 	}
 	static int getCount() { //인라인 형태 -> 함수 호출에 오버헤드가 들지 않음
